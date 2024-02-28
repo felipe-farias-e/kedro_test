@@ -13,7 +13,7 @@ def _is_true(x: Column) -> Column:
 
 def _parse_percentage(x: Column) -> Column:
     x = regexp_replace(x, "%", "")
-    x = x.cast("float") / 300
+    x = x.cast("float") / 100
     return x
 
 
